@@ -114,8 +114,8 @@ def sapreksolver(x,z,A,b,n_iters,eps):
 
 if __name__ == "__main__":
     #matrix dimensions
-    m = 200
-    n = 10
+    m = 2000
+    n = 100
 
     n_iters = 10000 #number of iterations
 
@@ -168,7 +168,7 @@ if __name__ == "__main__":
     # plt.ylabel('$||\mathbf{z}^k - \mathbf{z}^*||_2^2 + \epsilon||\mathbf{x}^k - \mathbf{x}^*||_2^2$')
     plt.ylabel('$||\mathbf{x}^k - \mathbf{x}^*||^2$')
     plt.legend()
-    plt.savefig('./figs/gaussian_x_epsilons.pdf')
+    plt.savefig('./figs/gaussian_x_epsilons'+str(m)+'x'+str(n)+'.pdf')
     plt.close()
     
 
@@ -218,7 +218,7 @@ if __name__ == "__main__":
     # plt.rcParams["mathtext.fontset"] = "cm"
     # plt.ylabel('$||\mathbf{z}^k - \mathbf{z}^*||_2^2 + \epsilon||\mathbf{x}^k - \mathbf{x}^*||_2^2$')
     plt.ylabel('$||\mathbf{x}^k - \mathbf{x}^*||^2$')
-    plt.savefig('./figs/coherent_x_epsilons.pdf')
+    plt.savefig('./figs/coherent_x_epsilons'+str(m)+'x'+str(n)+'.pdf')
     plt.close()
 
     lines = [l[0] for l in line_objects]

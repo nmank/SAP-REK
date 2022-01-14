@@ -199,13 +199,13 @@ if __name__ == "__main__":
 
 
     plt.figure('z_err')
-    plt.ylim(10**(-14),100)
+    plt.ylim(10**(-14),1000)
     plt.ylabel('$||\mathbf{z}^k - \mathbf{z}^*||^2$')
     plt.savefig('./figs/gaussian_REK_zs.pdf')
 
         
     plt.figure('xz_err')
-    plt.ylim(10**(-14),100)
+    plt.ylim(10**(-14),1000)
     plt.ylabel('$||\mathbf{z}^k - \mathbf{z}^*||^2 + \epsilon||\mathbf{x}^k - \mathbf{x}^*||^2$')
     plt.savefig('./figs/gaussian_REK_converges.pdf')
 
@@ -282,13 +282,13 @@ if __name__ == "__main__":
     plt.savefig('./figs/coherent_REK_xs.pdf')
 
     plt.figure('z_err')
-    plt.ylim(10**(-14),100)
+    plt.ylim(10**(-14),1000)
     plt.ylabel('$||\mathbf{z}^k - \mathbf{z}^*||^2$')
     plt.savefig('./figs/coherent_REK_zs.pdf')
 
         
     plt.figure('xz_err')
-    plt.ylim(10**(-14),100)
+    plt.ylim(10**(-14),1000)
     plt.ylabel('$||\mathbf{z}^k - \mathbf{z}^*||^2 + \epsilon||\mathbf{x}^k - \mathbf{x}^*||^2$')
     plt.savefig('./figs/coherent_REK_converges.pdf')
 
