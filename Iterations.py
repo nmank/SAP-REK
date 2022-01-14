@@ -110,7 +110,7 @@ def sapreksolver(x,z,A,b,n_iters,eps):
 
 if __name__ == "__main__":
     #matrix dimensions
-    m = 200
+    m = 0
     n = 10
 
     n_iters = 10000 #number of iterations
