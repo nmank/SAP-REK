@@ -41,8 +41,8 @@ def calc_lambda(sigma, eps):
 #build examples 200x10 matrix
 
 if __name__ == "__main__":
-    m=200
-    n=10
+    m=10000
+    n=100
 
     A_g = np.random.normal(0, 1, size = (m,n))
     A_c = np.random.uniform(0, 1, size = (m,n))
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     plt.xscale('log')
     plt.ylabel('Lambda')
     plt.legend()
-    plt.savefig('./figs/sigma_test.pdf')
+    plt.savefig('./figs/sigma_test'+str(m)+'x'+str(n)+'.pdf')
     plt.close()
 
     #separate plots
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     plt.xscale('log')
     plt.ylabel('Lambda')
     # plt.legend()
-    plt.savefig('./figs/sigma_test_gaussian.pdf')
+    plt.savefig('./figs/sigma_test_gaussian'+str(m)+'x'+str(n)+'.pdf')
     plt.close()
 
     plt.plot(eps, lambdas_c, label = 'Coherent')
@@ -84,7 +84,7 @@ if __name__ == "__main__":
     plt.xscale('log')
     plt.ylabel('Lambda')
     # plt.legend()
-    plt.savefig('./figs/sigma_test_coherent.pdf')
+    plt.savefig('./figs/sigma_test_coherent'+str(m)+'x'+str(n)+'.pdf')
     plt.close()
 
     

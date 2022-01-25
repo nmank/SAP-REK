@@ -110,8 +110,8 @@ def sapreksolver(x,z,A,b,n_iters,eps):
 
 if __name__ == "__main__":
     #matrix dimensions
-    m = 200
-    n = 10
+    m = 10000
+    n = 100
 
     n_iters = 500 #number of iterations
 
@@ -197,9 +197,10 @@ if __name__ == "__main__":
     
 
     plt.figure('x_err')
-    plt.ylim(10**(-14),10)
+    # plt.ylim(10**(-14),10)
+    plt.ylim(10**(-2),10**2)
     plt.ylabel('$||\mathbf{x}^k - \mathbf{x}^*||^2$')
-    plt.savefig('./figs/gaussian_REK_few_itr.pdf')
+    plt.savefig('./figs/gaussian_REK_few_itr'+str(m)+'x'+str(n)+'.pdf')
 
     # plt.figure('z_err')
     # plt.ylim(10**(-14),10)
@@ -279,9 +280,10 @@ if __name__ == "__main__":
         plt.xlabel('Iteration $k$')
 
     plt.figure('x_err')
-    plt.ylim(10**(-14),10)
+    # plt.ylim(10**(-14),10)
+    plt.ylim(10**(-2),10**2)
     plt.ylabel('$||\mathbf{x}^k - \mathbf{x}^*||^2$')
-    plt.savefig('./figs/coherent_REK_few_itr.pdf')
+    plt.savefig('./figs/coherent_REK_few_itr'+str(m)+'x'+str(n)+'.pdf')
 
     # plt.figure('z_err')
     # plt.ylim(10**(-14),10)
@@ -294,7 +296,7 @@ if __name__ == "__main__":
     # plt.ylabel('$||\mathbf{z}^k - \mathbf{z}^*||^2 + \epsilon||\mathbf{x}^k - \mathbf{x}^*||^2$')
     # plt.savefig('./figs/coherent_REK_converges.pdf')
 
-
+ 
 
     lines = [line_objects[i][0] for i in range(6)]
 
